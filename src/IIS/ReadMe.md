@@ -3,8 +3,8 @@
 Note: this test won't work on your local.
 
 1. Install Application Requesst Routing (ARR) in IIS
-   >> Configure Application Request Routing Proxy Setting. (IIS server node -> Right Panel Application Requst Routing -> Server Proxy Settings)
-   >> Enable Proxy.  
+   *>> Configure Application Request Routing Proxy Setting. (IIS server node -> Right Panel Application Requst Routing -> Server Proxy Settings)
+   *>> Enable Proxy.  
       Http version: Pass through.
 2. Install URL Rewrite Module 
 3. Configure URL Rewrite in web.config as below. 
