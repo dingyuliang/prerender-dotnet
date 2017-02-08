@@ -10,6 +10,7 @@ Note: this test won't work on your local.
 3. Configure URL Rewrite in web.config as below. 
    This configuration worked sometimes, but sometime didn't work, it might be the URL rewrite cache issue. 
    
+ '
  <cite>
    <rewrite>
             <rules>
@@ -27,3 +28,4 @@ Note: this test won't work on your local.
             </rules>
     </rewrite> 
    </cite>
+'
