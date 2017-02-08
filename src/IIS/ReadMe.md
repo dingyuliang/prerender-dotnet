@@ -10,6 +10,7 @@ Note: this test won't work on your local.
 3. Configure URL Rewrite in web.config as below. 
    This configuration worked sometimes, but sometime didn't work, it might be the URL rewrite cache issue. 
    
+   {::nomarkdown}
    <rewrite>
             <rules>
                 <rule name="RewriteSEO">
@@ -24,4 +25,5 @@ Note: this test won't work on your local.
 					  </serverVariables>
                 </rule>
             </rules>
-    </rewrite>    
+    </rewrite> 
+    {:/}
