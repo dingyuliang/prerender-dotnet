@@ -4,11 +4,9 @@ This project is to provide the prerender.io middlewares for ASP.NET MVC, ASP.NET
 There are two blog posts which explains why we need to use prerender to improve JavaScript SEO and how to implement it on different level.
 * [Use Prerender to improve AngularJS SEO](http://netopensource.com/use-prerender-improve-angularjs-seo/)
 
-  ![Application Level](http://netopensource.com/wp-content/uploads/2017/02/angularjs-prerender-1.png)
-  
-  ![Server Container Level](http://netopensource.com/wp-content/uploads/2017/02/angularjs-prerender-2.png)
-  
-  ![Network Level](http://netopensource.com/wp-content/uploads/2017/02/angularjs-prerender-3.png)
+  * Application Level  
+  * Server Container Level  
+  * Network Level
   
 * [Setup Prerender Service for JavaScript SEO](http://netopensource.com/setup-prerender-service-javascript-seo/)
 
