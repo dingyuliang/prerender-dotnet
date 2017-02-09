@@ -15,3 +15,6 @@ You can download the sample project from: /src/DotNetPrerender/DotNetOpen.Preren
 ## src/DotNetCorePrerender is the prerender.io middleware for ASP.NET Core
 ## src/IIS is the prerender.io configuration guide for IIS
 
+### Sample code
+You can download the sample project from: /src/IIS/web.config
+
