@@ -4,8 +4,8 @@ This project is to provide the prerender.io middlewares for ASP.NET MVC, ASP.NET
 ## src/DotNetPrerender is the prerender.io middleware for ASP.NET MVC
 
 ### Requirements
-* Need .NET Framework 4.6.2
-* Need Microsoft.Web.Infrastructure (>= 1.0.0)
+* .NET Framework 4.6.2
+* Microsoft.Web.Infrastructure (>= 1.0.0)
 
 ### User Guide
 * Download from Nuget: Install-Package DotNetOpen.PrerenderModule   
