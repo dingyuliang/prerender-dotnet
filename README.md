@@ -2,6 +2,7 @@
 This project is to provide the prerender.io middlewares for ASP.NET MVC, ASP.NET Core, IIS.
 
 ## src/DotNetPrerender is the prerender.io middleware for ASP.NET MVC
+
    * Download from Nuget: Install-Package DotNetOpen.PrerenderModule   
    * There are two different ways to configure PrerenderHttpModule   
       * Option 1: Use UsePrestartForPrenderModule app setting. Once UsePrestartForPrenderModule is true, it means we will use PreApplicationStartMethodAttribute to dynamically load the http module.
