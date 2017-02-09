@@ -8,7 +8,7 @@ using System.Web;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DotNetOpen.PrerenderModule")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("ASP.NET Middleware for Prerender.io")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("DotNetOpen.PrerenderModule")]

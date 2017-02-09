@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DotNetOpen.PrerenderModule</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Yuliang Ding</authors>
+    <owners>Yuliang Ding</owners>
+    <licenseUrl>https://github.com/dingyuliang/prerender-dotnet/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/dingyuliang/prerender-dotnet</projectUrl>
+    <iconUrl>https://www.nuget.org/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ASP.NET MVC Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet. </description>
+    <releaseNotes>First release of ASP.NET MVC Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet. </releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Prerender, Prerender.io, ASP.NET MVC Middleware, ASP.NET Module</tags>
+    <language>.NET 4.6</language>
+  </metadata>
+</package>
