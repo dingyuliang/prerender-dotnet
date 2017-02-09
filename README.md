@@ -14,7 +14,7 @@ This project is to provide the prerender.io middlewares for ASP.NET MVC, ASP.NET
       * Option 2: Use Web.config to configure PrerenderHttpModule (set UsePrestartForPrenderModule = false), please make sure you use Integrated Mode for application pool.
 
 ### Sample code
-You can download the sample project from: /src/DotNetPrerender/DotNetOpen.PrerenderModule.Mvc
+You can download the sample project from: https://github.com/dingyuliang/prerender-dotnet/tree/master/src/DotNetPrerender/DotNetOpen.PrerenderModule.Mvc
 
 ## src/DotNetCorePrerender is the prerender.io middleware for ASP.NET Core
 ## src/IIS is the prerender.io configuration guide for IIS
@@ -48,5 +48,5 @@ You can download the sample project from: /src/DotNetPrerender/DotNetOpen.Preren
 ```
 
 ### Sample code
-You can download the sample project from: /src/IIS/web.config
+You can download the sample project from: https://github.com/dingyuliang/prerender-dotnet/tree/master/src/IIS
 
