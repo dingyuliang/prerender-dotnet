@@ -3,3 +3,4 @@ D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderMod
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\obj\Debug\DotNetOpen.PrerenderModule.dll
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\obj\Debug\DotNetOpen.PrerenderModule.pdb
+D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\obj\Debug\DotNetOpen.PrerenderModule.csprojResolveAssemblyReference.cache

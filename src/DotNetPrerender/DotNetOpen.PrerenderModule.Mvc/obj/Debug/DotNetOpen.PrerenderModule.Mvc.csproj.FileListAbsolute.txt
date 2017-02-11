@@ -41,7 +41,6 @@ D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderMod
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule.Mvc\bin\System.Web.WebPages.dll
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule.Mvc\bin\System.Web.WebPages.Razor.dll
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule.Mvc\bin\WebGrease.dll
-D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule.Mvc\bin\DotNetOpen.PrerenderModule.pdb
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule.Mvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule.Mvc\bin\System.Web.Helpers.xml
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule.Mvc\bin\System.Web.Mvc.xml
@@ -69,3 +68,4 @@ D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderMod
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule.Mvc\obj\Debug\DotNetOpen.PrerenderModule.Mvc.csprojResolveAssemblyReference.cache
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule.Mvc\obj\Debug\DotNetOpen.PrerenderModule.Mvc.dll
 D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule.Mvc\obj\Debug\DotNetOpen.PrerenderModule.Mvc.pdb
+D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule.Mvc\bin\DotNetOpen.PrerenderModule.pdb

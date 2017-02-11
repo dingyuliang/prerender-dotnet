@@ -3804,6 +3804,26 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "DotNetCoreOpen.PrenderMiddleware/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.6",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "1.0.0",
+          "Microsoft.AspNetCore.Http.Extensions": "1.0.0",
+          "Microsoft.Extensions.Configuration": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "Microsoft.Extensions.Options": "1.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
+          "NETStandard.Library": "1.6.0",
+          "System.Net.Requests": "4.0.11"
+        },
+        "compile": {
+          "netstandard1.6/DotNetCoreOpen.PrenderMiddleware.dll": {}
+        },
+        "runtime": {
+          "netstandard1.6/DotNetCoreOpen.PrenderMiddleware.dll": {}
+        }
       }
     }
   },
@@ -9874,10 +9894,16 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "DotNetCoreOpen.PrenderMiddleware/1.0.0": {
+      "type": "project",
+      "path": "../DotNetCoreOpen.PrenderMiddleware/project.json",
+      "msbuildProject": "../DotNetCoreOpen.PrenderMiddleware/DotNetCoreOpen.PrenderMiddleware.xproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
+      "DotNetCoreOpen.PrenderMiddleware >= 1.0.0-*",
       "Microsoft.AspNetCore.Diagnostics >= 1.0.0",
       "Microsoft.AspNetCore.Mvc >= 1.0.0",
       "Microsoft.AspNetCore.Razor.Tools >= 1.0.0-preview2-final",

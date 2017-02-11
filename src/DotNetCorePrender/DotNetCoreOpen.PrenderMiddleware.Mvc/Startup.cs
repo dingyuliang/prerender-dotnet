@@ -18,6 +18,8 @@ namespace DotNetCoreOpen.PrenderMiddleware.Mvc
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                // Prerender Step 1: Add Prerender configuration Json file.
+                .AddPrerenderConfig() 
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
@@ -29,6 +31,10 @@ namespace DotNetCoreOpen.PrenderMiddleware.Mvc
         {
             // Add framework services.
             services.AddMvc();
+
+            // Prerender Step 2: Add Options.
+            services.AddOptions();
+            services.ConfigureSection<PrerenderConfiguration>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +42,9 @@ namespace DotNetCoreOpen.PrenderMiddleware.Mvc
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+            // Prerender Step 3: UsePrerender, before others.
+            app.UsePrerender();
 
             if (env.IsDevelopment())
             {

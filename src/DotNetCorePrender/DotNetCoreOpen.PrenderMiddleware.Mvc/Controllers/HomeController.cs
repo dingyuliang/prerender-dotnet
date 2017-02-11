@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading;
 
 namespace DotNetCoreOpen.PrenderMiddleware.Mvc.Controllers
 {
@@ -15,6 +16,7 @@ namespace DotNetCoreOpen.PrenderMiddleware.Mvc.Controllers
 
         public IActionResult About()
         {
+            Thread.Sleep(3000);
             ViewData["Message"] = "Your application description page.";
 
             return View();

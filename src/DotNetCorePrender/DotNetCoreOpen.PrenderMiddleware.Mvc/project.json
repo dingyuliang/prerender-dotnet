@@ -1,4 +1,4 @@
-﻿{
+{
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.0.0",
@@ -19,7 +19,8 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0"
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
+    "DotNetCoreOpen.PrenderMiddleware": "1.0.0-*"
   },
 
   "tools": {
@@ -59,7 +60,11 @@
   },
 
   "scripts": {
-    "prepublish": [ "bower install", "dotnet bundle" ],
-    "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
+    "prepublish": [
+    ],
+    "postpublish": [
+      "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%",
+      "xcopy  bin\\%publish:Configuration%\\netcoreapp1.0\\*.dll %publish:OutputPath% /R /Y"
+    ]
   }
 }

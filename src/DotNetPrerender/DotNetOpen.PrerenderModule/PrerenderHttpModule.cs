@@ -150,8 +150,9 @@ namespace DotNetOpen.PrerenderModule
                 return false;
 
             // check if it's crawler user agent.
-            if (string.IsNullOrEmpty(Configuration.CrawlerUserAgentPattern)
-             || !Regex.IsMatch(userAgent, Configuration.CrawlerUserAgentPattern, RegexOptions.IgnorePatternWhitespace))
+            var crawlerUserAgentPattern = Configuration.CrawlerUserAgentPattern ?? Constants.CrawlerUserAgentPattern;
+            if (string.IsNullOrEmpty(crawlerUserAgentPattern)
+             || !Regex.IsMatch(userAgent, crawlerUserAgentPattern, RegexOptions.IgnorePatternWhitespace))
                 return false;
             
             // check if the extenion matchs default extension

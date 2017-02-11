@@ -11,8 +11,9 @@
 <script>
     $(function () {
         setTimeout(function () {
-            $(".timeout-target").html("Use this area to provide additional information: "+ new Date());
-        },1000);
+            $(".timeout-target").html("Use this area to provide additional information: " + new Date());
+            $.prerenderReady();
+        },10000);
     });
 </script>
 }

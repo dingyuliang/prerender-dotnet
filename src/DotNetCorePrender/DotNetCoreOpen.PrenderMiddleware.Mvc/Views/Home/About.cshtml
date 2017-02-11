@@ -1,7 +1,21 @@
 ﻿@{
-    ViewData["Title"] = "About";
+    ViewBag.Title = "About";
+    
 }
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<p>User Agent: @(Context.Request.Headers[DotNetCoreOpen.PrenderMiddleware.Constants.HttpHeader_ContentType])</p>
+<br />
+<p class="timeout-target">Default Text.</p>
+@section scripts{
+    <script>
+        window.prerenderReady = false;
+        $(function () {
+            setTimeout(function () {
+                $(".timeout-target").html("Use this area to provide additional information: " + new Date());
+                window.prerenderReady = true;
+        },3000);
+    });
+    </script>
+}
