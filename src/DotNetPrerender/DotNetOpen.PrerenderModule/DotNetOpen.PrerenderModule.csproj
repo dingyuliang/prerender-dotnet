@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="Configuration\PrerenderConfigurationSection.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="PrerenderHttpModule.cs" />
@@ -54,7 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DotNetOpen.PrerenderModule.1.0.0.nupkg" />
+    <None Include="DotNetOpen.PrerenderModule.1.0.1.nupkg" />
     <None Include="DotNetOpen.PrerenderModule.nuspec" />
+    <None Include="nuget-pack.cmd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
