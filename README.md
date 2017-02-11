@@ -1,14 +1,26 @@
-# prerender.io Middlewares for ASP.NET MVC, ASP.NET Core, IIS
+# ASP.NET MVC, ASP.NET Core, IIS Middlewares for prerender.io
 This project is to provide the prerender.io middlewares for ASP.NET MVC, ASP.NET Core, IIS. 
 
-## src/DotNetPrerender is the prerender.io middleware for ASP.NET MVC
+There are two blog posts which explain why we need to use prerender to improve JavaScript SEO and how to implement it on different levels.
+* [Use Prerender to improve AngularJS SEO](http://netopensource.com/use-prerender-improve-angularjs-seo/)
+
+  * Application Level  
+  * Server Container Level  
+  * Network Level
+  
+* [Setup Prerender Service for JavaScript SEO](http://netopensource.com/setup-prerender-service-javascript-seo/)
+
+## src/DotNetPrerender is the ASP.NET MVC middleware for prerender.io
 
 ### Requirements
 * .NET Framework 4.6.2
 * Microsoft.Web.Infrastructure (>= 1.0.0)
 
 ### User Guide
-* Download from Nuget: Install-Package DotNetOpen.PrerenderModule   
+* Download from Nuget: 
+```
+Install-Package DotNetOpen.PrerenderModule  
+```
 * Configure PrerenderHttpModule in your ASP.NET or ASP.NET MVC project, there are two ways to configure:   
       * Option 1: Use UsePrestartForPrenderModule app setting. Once UsePrestartForPrenderModule is true, it means we will use PreApplicationStartMethodAttribute to dynamically load the http module.
       * Option 2: Use Web.config to configure PrerenderHttpModule (set UsePrestartForPrenderModule = false), please make sure you use Integrated Mode for application pool.
@@ -16,8 +28,8 @@ This project is to provide the prerender.io middlewares for ASP.NET MVC, ASP.NET
 ### Sample code
 You can download the sample project from: https://github.com/dingyuliang/prerender-dotnet/tree/master/src/DotNetPrerender/DotNetOpen.PrerenderModule.Mvc
 
-## src/DotNetCorePrerender is the prerender.io middleware for ASP.NET Core
-## src/IIS is the prerender.io configuration guide for IIS
+## src/DotNetCorePrerender is the ASP.NET Core middleware for prerender.io  
+## src/IIS is the IIS configuration guide for prerender.io
 
 ### User Guide
 
