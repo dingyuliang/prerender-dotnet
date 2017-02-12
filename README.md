@@ -35,15 +35,25 @@ You can download the sample project from: https://github.com/dingyuliang/prerend
 
 ### User Guide
 * Download from Nuget: 
-
 ```
 Install-Package DotNetCoreOpen.PrenderMiddleware  
 ```
-
 * Configuration File 
-      ** Option 1: Use UsePrestartForPrenderModule app setting. Once UsePrestartForPrenderModule is true, it means we will use PreApplicationStartMethodAttribute to dynamically load the http module.
-      ** Option 2: Use Web.config to configure PrerenderHttpModule (set UsePrestartForPrenderModule = false), please make sure you use 
-      
+      Add PrerenderConfiguration.json in your ASP.NET Core project by following below content format:
+        ```
+	{
+	  "PrerenderConfiguration": {
+	    "ServiceUrl": "http://localhost:3000",
+	    "Token": null,
+	    "CrawlerUserAgentPattern": null,
+	    "WhiteListPattern": null,
+	    "BlackListPattern": "lib|css|js",
+	    "AdditionalExtensionPattern": null,
+	    "ProxyUrl": null,
+	    "ProxyPort": 80
+	  }
+	}
+        ```
 * Add code in startup.cs
       ** Step 1: Use AddPrerenderConfig() in ConfigurationBuilder
       
