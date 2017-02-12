@@ -10,6 +10,8 @@ There are two blog posts which explain why we need to use prerender to improve J
   
 * [Setup Prerender Service for JavaScript SEO](http://netopensource.com/setup-prerender-service-javascript-seo/)
 
+* [Prerender Implementation Best Practice](http://netopensource.com/prerender-implementation-best-practice/)
+
 ## src/DotNetPrerender is the ASP.NET MVC middleware for prerender.io
 
    Please follow [Prerender Middleware for ASP.NET](https://github.com/dingyuliang/prerender-dotnet/wiki/Prerender-Configuration-in-IIS)
