@@ -7,7 +7,7 @@
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>562e223a-4180-4f42-a82c-e6e23367b806</ProjectGuid>
-    <RootNamespace>DotNetCoreOpen.PrenderMiddleware.Mvc</RootNamespace>
+    <RootNamespace>DotNetCoreOpen.PrerenderMiddleware.Mvc</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>

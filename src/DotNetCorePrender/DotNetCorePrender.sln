@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotNetCoreOpen.PrenderMiddleware", "DotNetCoreOpen.PrenderMiddleware\DotNetCoreOpen.PrenderMiddleware.xproj", "{78D0DE21-A9A2-4F5C-87A4-949D4D1603E3}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotNetCoreOpen.PrerenderMiddleware", "DotNetCoreOpen.PrenderMiddleware\DotNetCoreOpen.PrerenderMiddleware.xproj", "{78D0DE21-A9A2-4F5C-87A4-949D4D1603E3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{0767EAF6-40F2-42F2-B0DD-1BEE748EF407}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotNetCoreOpen.PrenderMiddleware.Mvc", "DotNetCoreOpen.PrenderMiddleware.Mvc\DotNetCoreOpen.PrenderMiddleware.Mvc.xproj", "{562E223A-4180-4F42-A82C-E6E23367B806}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotNetCoreOpen.PrerenderMiddleware.Mvc", "DotNetCoreOpen.PrenderMiddleware.Mvc\DotNetCoreOpen.PrerenderMiddleware.Mvc.xproj", "{562E223A-4180-4F42-A82C-E6E23367B806}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

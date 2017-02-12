@@ -25,7 +25,7 @@
     ]
   },
 
-  "title": "DotNetCoreOpen.PrenderMiddleware",
+  "title": "DotNetCoreOpen.PrerenderMiddleware",
   "description": "ASP.NET Core Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet.",
   "authors": [ "dingyuliang" ],
   "language": ".NET Core",
