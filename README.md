@@ -41,11 +41,11 @@ Install-Package DotNetCoreOpen.PrenderMiddleware
 ```
 
 * Configuration File 
-      * Option 1: Use UsePrestartForPrenderModule app setting. Once UsePrestartForPrenderModule is true, it means we will use PreApplicationStartMethodAttribute to dynamically load the http module.
-      * Option 2: Use Web.config to configure PrerenderHttpModule (set UsePrestartForPrenderModule = false), please make sure you use 
+      ** Option 1: Use UsePrestartForPrenderModule app setting. Once UsePrestartForPrenderModule is true, it means we will use PreApplicationStartMethodAttribute to dynamically load the http module.
+      ** Option 2: Use Web.config to configure PrerenderHttpModule (set UsePrestartForPrenderModule = false), please make sure you use 
       
 * Add code in startup.cs
-      * Step 1: Use AddPrerenderConfig() in ConfigurationBuilder
+      ** Step 1: Use AddPrerenderConfig() in ConfigurationBuilder
       
         ```
         var builder = new ConfigurationBuilder()
@@ -57,7 +57,7 @@ Install-Package DotNetCoreOpen.PrenderMiddleware
                 .AddEnvironmentVariables();
 	```
 	
-      * Step 2: Configure Configuration Option in ServiceCollections
+      ** Step 2: Configure Configuration Option in ServiceCollections
       
         ```
 	    // Prerender Step 2: Add Options.
@@ -65,7 +65,7 @@ Install-Package DotNetCoreOpen.PrenderMiddleware
             services.ConfigureSection<PrerenderConfiguration>(Configuration);
         ```
 	
-      * Step 3: Configure Prerender Middleware in IApplicationBuilder
+      ** Step 3: Configure Prerender Middleware in IApplicationBuilder
       
         ```
             // Prerender Step 3: UsePrerender, before others.
@@ -74,6 +74,7 @@ Install-Package DotNetCoreOpen.PrenderMiddleware
       
 ### Sample code
 You can download the sample project from: https://github.com/dingyuliang/prerender-dotnet/tree/master/src/DotNetCorePrender/DotNetCoreOpen.PrenderMiddleware.Mvc
+
 
 ## src/IIS is the IIS configuration guide for prerender.io
 
