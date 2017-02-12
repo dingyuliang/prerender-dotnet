@@ -60,6 +60,7 @@
     <None Include="DotNetOpen.PrerenderModule.1.0.0.nupkg" />
     <None Include="DotNetOpen.PrerenderModule.1.0.1.nupkg" />
     <None Include="DotNetOpen.PrerenderModule.1.0.2.nupkg" />
+    <None Include="DotNetOpen.PrerenderModule.1.0.4.nupkg" />
     <None Include="DotNetOpen.PrerenderModule.nuspec" />
     <None Include="nuget-pack.cmd" />
     <None Include="packages.config" />

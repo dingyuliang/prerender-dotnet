@@ -47,8 +47,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
             await Prerender(httpContext);
         }
         #endregion
-
-
+        
         #region Prerender
         /// <summary>
         /// Prerender logic

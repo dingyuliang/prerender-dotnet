@@ -22,19 +22,14 @@ namespace DotNetOpen.PrerenderModule
         static readonly PrerenderConfigurationSection Configuration = PrerenderConfigurationSection.GetSection();
         static readonly Encoding DefaultEncoding = Encoding.UTF8; 
         #endregion
-
-        #region Fields
-        HttpApplication context;
-        #endregion
-
+        
         #region Implement IHttpModule
         /// <summary>
         /// init
         /// </summary>
         /// <param name="context"></param>
         public void Init(HttpApplication context)
-        {
-            this.context = context; 
+        { 
             context.BeginRequest += context_BeginRequest;
         }
 
@@ -51,7 +46,7 @@ namespace DotNetOpen.PrerenderModule
         {
             try
             {
-                Prerender(context);
+                Prerender(sender as HttpApplication);
             }
             catch (Exception exception)
             {               
@@ -64,10 +59,10 @@ namespace DotNetOpen.PrerenderModule
         /// <summary>
         /// Prerender logic
         /// </summary>
-        /// <param name="context"></param>
-        private void Prerender(HttpApplication context)
+        /// <param name="application"></param>
+        private void Prerender(HttpApplication application)
         {
-            var httpContext = context.Context;
+            var httpContext = application.Context;
             var request = httpContext.Request;
             var response = httpContext.Response;
             if (IsValidForPrerenderPage(request))
@@ -94,45 +89,38 @@ namespace DotNetOpen.PrerenderModule
                 if (!string.IsNullOrEmpty(Configuration.ProxyUrl) && Configuration.ProxyPort > 0)
                     webRequest.Proxy = new WebProxy(Configuration.ProxyUrl, Configuration.ProxyPort);
 
+                // Add token
                 if (!string.IsNullOrEmpty(Configuration.Token))
                     webRequest.Headers.Add(Constants.HttpHeader_XPrerenderToken, Configuration.Token);
 
+                var webResponse = default(HttpWebResponse);
                 try
                 {
                     // Get the web response and read content etc. if successful
-                    var webResponse = (HttpWebResponse)webRequest.GetResponse();
-                    WriteToResponse(response, webResponse);
+                    webResponse = (HttpWebResponse)webRequest.GetResponse();
                 }
                 catch (WebException e)
                 {
                     // Handle response WebExceptions for invalid renders (404s, 504s etc.) - but we still want the content 
-                    WriteToResponse(response, e.Response as HttpWebResponse);
+                    webResponse = e.Response as HttpWebResponse;
+                }
+
+                // write response
+                response.StatusCode = (int)webResponse.StatusCode;
+                foreach (string key in webResponse.Headers.Keys)
+                {
+                    response.Headers[key] = webResponse.Headers[key];
+                }
+                using (var reader = new StreamReader(webResponse.GetResponseStream(), DefaultEncoding))
+                {
+                    response.Write(reader.ReadToEnd());
                 }
 
                 response.Flush();
-                context.CompleteRequest();
+                application.CompleteRequest();
             }
         }
-
-        /// <summary>
-        /// Write WebResponse to HttpResponse
-        /// </summary>
-        /// <param name="response"></param>
-        /// <param name="webResponse"></param>
-        private void WriteToResponse(HttpResponse response, HttpWebResponse webResponse)
-        {
-            response.StatusCode = (int)webResponse.StatusCode;
-            foreach (string key in webResponse.Headers.Keys)
-            {
-                response.Headers[key] = webResponse.Headers[key];
-            }
-
-            using (var reader = new StreamReader(webResponse.GetResponseStream(), DefaultEncoding))
-            {
-                response.Write(reader.ReadToEnd());
-            }
-        }
-
+         
         private bool IsValidForPrerenderPage(HttpRequest request)
         {
             var userAgent = request.UserAgent;
