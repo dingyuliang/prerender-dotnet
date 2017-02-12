@@ -15,6 +15,7 @@ There are several blog posts which explain why we need to use prerender to impro
 ## src/DotNetPrerender is the ASP.NET MVC middleware for prerender.io
 
    Please follow [Prerender Middleware for ASP.NET](https://github.com/dingyuliang/prerender-dotnet/wiki/Prerender-Middleware-for-ASP.NET)
+   
    Download from Nuget: 
 ```
 Install-Package DotNetOpen.PrerenderModule  
@@ -23,6 +24,7 @@ Install-Package DotNetOpen.PrerenderModule
 ## src/DotNetCorePrerender is the ASP.NET Core middleware for prerender.io 
 
    Please follow [Prerender Middleware for ASP.NET Core](https://github.com/dingyuliang/prerender-dotnet/wiki/Prerender-Middleware-for-ASP.NET-Core)
+   
    Download from Nuget: 
 ```
 Install-Package DotNetCoreOpen.PrenderMiddleware  
