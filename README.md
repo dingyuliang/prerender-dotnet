@@ -14,11 +14,11 @@ There are several blog posts which explain why we need to use prerender to impro
 
 ## src/DotNetPrerender is the ASP.NET MVC middleware for prerender.io
 
-   Please follow [Prerender Middleware for ASP.NET](https://github.com/dingyuliang/prerender-dotnet/wiki/Prerender-Configuration-in-IIS)
+   Please follow [Prerender Middleware for ASP.NET](https://github.com/dingyuliang/prerender-dotnet/wiki/Prerender-Middleware-for-ASP.NET)
 
 ## src/DotNetCorePrerender is the ASP.NET Core middleware for prerender.io 
 
-   Please follow [Prerender Middleware for ASP.NET Core](https://github.com/dingyuliang/prerender-dotnet/wiki/Prerender-Configuration-in-IIS)
+   Please follow [Prerender Middleware for ASP.NET Core](https://github.com/dingyuliang/prerender-dotnet/wiki/Prerender-Middleware-for-ASP.NET-Core)
 
 ## src/IIS is the IIS configuration guide for prerender.io
    
