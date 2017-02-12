@@ -1,7 +1,7 @@
 # ASP.NET MVC, ASP.NET Core, IIS Middlewares for prerender.io
 This project is to provide the prerender.io middlewares for ASP.NET MVC, ASP.NET Core, IIS. 
 
-There are two blog posts which explain why we need to use prerender to improve JavaScript SEO and how to implement it on different levels.
+There are several blog posts which explain why we need to use prerender to improve JavaScript SEO and how to implement it on different levels.
 * [Use Prerender to improve AngularJS SEO](http://netopensource.com/use-prerender-improve-angularjs-seo/)
 
   * Application Level (i.e.  ASP.NET MVC middleware for prerender.io and ASP.NET Core middleware for prerender.io)
