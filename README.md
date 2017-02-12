@@ -27,7 +27,7 @@ Install-Package DotNetOpen.PrerenderModule
    
    Download from Nuget: 
 ```
-Install-Package DotNetCoreOpen.PrenderMiddleware  
+Install-Package DotNetCoreOpen.PrerenderMiddleware  
 ```
 
 ## src/IIS is the IIS configuration guide for prerender.io
