@@ -15,6 +15,6 @@
     <copyright>Copyright 2017</copyright>
     <tags>Prerender, Prerender.io, ASP.NET MVC Middleware, ASP.NET Module</tags>
     <summary>ASP.NET MVC Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet. </summary>
-    <language>.NET 4.6</language>
+    <language>.NET 4.0</language>
   </metadata>
 </package>
