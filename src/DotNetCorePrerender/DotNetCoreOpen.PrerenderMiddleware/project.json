@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-*",
+  "version": "1.0.1-*",
 
   "dependencies": {
     "Microsoft.AspNetCore.Http.Abstractions": "1.0.0",
@@ -26,7 +26,7 @@
   },
 
   "title": "DotNetCoreOpen.PrerenderMiddleware",
-  "description": "ASP.NET Core Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet.",
+  "description": "github: https://github.com/dingyuliang/prerender-dotnet, ASP.NET Core Middleware for Prerender.io.",
   "authors": [ "dingyuliang" ],
   "language": ".NET Core",
   "copyright": "Copyright 2017",
@@ -37,7 +37,7 @@
     "requireLicenseAcceptance": true,
     "owners": [ "dingyuliang" ],
     "tags": [ "Prerender", "Prerender.io", "ASP.NET Core Middleware", "ASP.NET Core", "DotNetCore" ],
-    "releaseNotes": "First release of ASP.NET Core Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet.",
-    "summary": "ASP.NET Core Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet."
+    "releaseNotes": "github: https://github.com/dingyuliang/prerender-dotnet, First release of ASP.NET Core Middleware for Prerender.io.",
+    "summary": "github: https://github.com/dingyuliang/prerender-dotnet, ASP.NET Core Middleware for Prerender.io."
   }
 }

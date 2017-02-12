@@ -29,7 +29,7 @@
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
-          "DotNetCoreOpen.PrerenderMiddleware": "1.0.0"
+          "DotNetCoreOpen.PrerenderMiddleware": "1.0.1"
         },
         "runtime": {
           "DotNetCoreOpen.PrerenderMiddleware.Mvc.dll": {}
@@ -1574,7 +1574,7 @@
           "lib/netstandard1.0/System.Text.Encodings.Web.dll": {}
         }
       },
-      "DotNetCoreOpen.PrerenderMiddleware/1.0.0": {
+      "DotNetCoreOpen.PrerenderMiddleware/1.0.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "1.0.0",
           "Microsoft.AspNetCore.Http.Extensions": "1.0.0",
@@ -3713,7 +3713,7 @@
       "serviceable": true,
       "sha512": "sha512-TWZnuiJgPDAEEUfobD7njXvSVR2Toz+jvKWds6yL4oSztmKQfnWzucczjzA+6Dv1bktBdY71sZW1YN0X6m9chQ=="
     },
-    "DotNetCoreOpen.PrerenderMiddleware/1.0.0": {
+    "DotNetCoreOpen.PrerenderMiddleware/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

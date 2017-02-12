@@ -27,7 +27,6 @@ namespace DotNetOpen.PrerenderModule
         HttpApplication context;
         #endregion
 
-
         #region Implement IHttpModule
         /// <summary>
         /// init

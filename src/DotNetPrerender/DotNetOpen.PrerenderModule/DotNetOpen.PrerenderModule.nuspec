@@ -9,12 +9,12 @@
     <licenseUrl>https://github.com/dingyuliang/prerender-dotnet/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/dingyuliang/prerender-dotnet</projectUrl>
     <iconUrl>https://www.nuget.org/favicon.ico</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>ASP.NET MVC Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet. </description>
-    <releaseNotes>First release of ASP.NET MVC Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet. </releaseNotes>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>github: https://github.com/dingyuliang/prerender-dotnet, ASP.NET MVC and WebForm Middleware for Prerender.io. </description>
+    <releaseNotes>github: https://github.com/dingyuliang/prerender-dotnet, First release of ASP.NET MVC and WebForm Middleware for Prerender.io. </releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>Prerender, Prerender.io, ASP.NET MVC Middleware, ASP.NET Module</tags>
-    <summary>ASP.NET MVC Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet. </summary>
+    <summary>github: https://github.com/dingyuliang/prerender-dotnet, ASP.NET MVC and WebForm Middleware for Prerender.io. </summary>
     <language>.NET 4.0</language>
   </metadata>
 </package>
