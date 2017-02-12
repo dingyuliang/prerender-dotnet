@@ -72,6 +72,7 @@ namespace DotNetCoreOpen.PrenderMiddleware
                 }
                 var prerenderUrl = $"{Configuration.ServiceUrl.Trim('/')}/{requestUrl}";
 
+                // use HttpClient instead of HttpWebRequest, as HttpClient has AllowAutoRedirect option.
                 var httpClientHandler = new HttpClientHandler() { AllowAutoRedirect = true };
                 // Proxy Information
                 if (!string.IsNullOrEmpty(Configuration.ProxyUrl) && Configuration.ProxyPort > 0)

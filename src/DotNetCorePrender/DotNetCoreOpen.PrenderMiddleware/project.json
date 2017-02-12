@@ -16,5 +16,28 @@
     "netstandard1.6": {
       "imports": "dnxcore50"
     }
+  },
+
+  "scripts": {
+    "postcompile": [
+      "xcopy  bin\\%compile:Configuration%\\netstandard1.6\\*.dll bin\\%compile:Configuration%\\ /R /Y",
+      "dotnet pack --no-build --configuration %compile:Configuration%"
+    ]
+  },
+
+  "title": "DotNetCoreOpen.PrenderMiddleware",
+  "description": "ASP.NET Core Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet.",
+  "authors": [ "dingyuliang" ],
+  "language": ".NET Core",
+  "copyright": "Copyright 2017",
+  "packOptions": {
+    "licenseUrl": "https://github.com/dingyuliang/prerender-dotnet/blob/master/LICENSE",
+    "projectUrl": "https://github.com/dingyuliang/prerender-dotnet",
+    "iconUrl": "https://www.nuget.org/favicon.ico",
+    "requireLicenseAcceptance": true,
+    "owners": [ "dingyuliang" ],
+    "tags": [ "Prerender", "Prerender.io", "ASP.NET Core Middleware", "ASP.NET", "Core" ],
+    "releaseNotes": "First release of ASP.NET Core Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet.",
+    "summary": "ASP.NET Core Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet."
   }
 }
