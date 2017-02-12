@@ -35,6 +35,7 @@ You can download the sample project from: https://github.com/dingyuliang/prerend
 
 ### User Guide
 * Download from Nuget: 
+
 ```
 Install-Package DotNetCoreOpen.PrenderMiddleware  
 ```
@@ -45,6 +46,7 @@ Install-Package DotNetCoreOpen.PrenderMiddleware
       
 * Add code in startup.cs
       * Step 1: Use AddPrerenderConfig() in ConfigurationBuilder
+      
         ```
         var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
@@ -54,13 +56,17 @@ Install-Package DotNetCoreOpen.PrenderMiddleware
                 .AddPrerenderConfig() 
                 .AddEnvironmentVariables();
 	```
+	
       * Step 2: Configure Configuration Option in ServiceCollections
+      
         ```
 	    // Prerender Step 2: Add Options.
             services.AddOptions();
             services.ConfigureSection<PrerenderConfiguration>(Configuration);
         ```
+	
       * Step 3: Configure Prerender Middleware in IApplicationBuilder
+      
         ```
             // Prerender Step 3: UsePrerender, before others.
             app.UsePrerender();	
