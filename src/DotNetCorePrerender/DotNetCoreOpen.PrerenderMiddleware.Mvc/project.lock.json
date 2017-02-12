@@ -3805,7 +3805,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "DotNetCoreOpen.PrerenderMiddleware/1.0.0": {
+      "DotNetCoreOpen.PrerenderMiddleware/1.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v1.6",
         "dependencies": {
@@ -9895,7 +9895,7 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "DotNetCoreOpen.PrerenderMiddleware/1.0.0": {
+    "DotNetCoreOpen.PrerenderMiddleware/1.0.1": {
       "type": "project",
       "path": "../DotNetCoreOpen.PrerenderMiddleware/project.json",
       "msbuildProject": "../DotNetCoreOpen.PrerenderMiddleware/DotNetCoreOpen.PrerenderMiddleware.xproj"
@@ -9903,7 +9903,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "DotNetCoreOpen.PrerenderMiddleware >= 1.0.0-*",
+      "DotNetCoreOpen.PrerenderMiddleware >= 1.0.1-*",
       "Microsoft.AspNetCore.Diagnostics >= 1.0.0",
       "Microsoft.AspNetCore.Mvc >= 1.0.0",
       "Microsoft.AspNetCore.Razor.Tools >= 1.0.0-preview2-final",

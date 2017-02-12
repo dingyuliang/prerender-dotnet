@@ -70,7 +70,7 @@ namespace DotNetOpen.PrerenderModule
             var httpContext = context.Context;
             var request = httpContext.Request;
             var response = httpContext.Response;
-            if (ShouldPrerenderPage(request))
+            if (IsValidForPrerenderPage(request))
             {
                 // generate URL
                 var requestUrl = request.Url.AbsoluteUri;
@@ -133,7 +133,7 @@ namespace DotNetOpen.PrerenderModule
             }
         }
 
-        private bool ShouldPrerenderPage(HttpRequest request)
+        private bool IsValidForPrerenderPage(HttpRequest request)
         {
             var userAgent = request.UserAgent;
             var url = request.Url;
@@ -158,15 +158,18 @@ namespace DotNetOpen.PrerenderModule
             if (Regex.IsMatch(relativeUrl, DefaultIgnoredExtensions, RegexOptions.IgnorePatternWhitespace))
                 return false;
 
-            if (!string.IsNullOrEmpty(Configuration.WhiteListPattern)
-              && Regex.IsMatch(rawUrl, Configuration.WhiteListPattern, RegexOptions.IgnorePatternWhitespace))
-                return true;
+            if (!string.IsNullOrEmpty(Configuration.AdditionalExtensionPattern) && Regex.IsMatch(relativeUrl, Configuration.AdditionalExtensionPattern, RegexOptions.IgnorePatternWhitespace))
+                return false;
 
             if (!string.IsNullOrEmpty(Configuration.BlackListPattern)
               && Regex.IsMatch(rawUrl, Configuration.BlackListPattern, RegexOptions.IgnorePatternWhitespace))
                 return false;
 
-            return true;
+            if (!string.IsNullOrEmpty(Configuration.WhiteListPattern)
+              && Regex.IsMatch(rawUrl, Configuration.WhiteListPattern, RegexOptions.IgnorePatternWhitespace))
+                return true;
+
+            return false;
 
         }
         #endregion

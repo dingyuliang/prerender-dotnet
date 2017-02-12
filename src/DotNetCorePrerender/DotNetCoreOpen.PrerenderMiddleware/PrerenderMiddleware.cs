@@ -60,7 +60,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
             var response = httpContext.Response;
             var requestFeature = httpContext.Features.Get<IHttpRequestFeature>();
             
-            if (ShouldPrerenderPage(request, requestFeature))
+            if (IsValidForPrerenderPage(request, requestFeature))
             {
                 // generate URL
                 var requestUrl = request.GetDisplayUrl();
@@ -120,7 +120,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
             }
         }
         
-        private bool ShouldPrerenderPage(HttpRequest request, IHttpRequestFeature requestFeature)
+        private bool IsValidForPrerenderPage(HttpRequest request, IHttpRequestFeature requestFeature)
         {
             var userAgent = request.Headers[Constants.HttpHeader_UserAgent];
             var rawUrl = requestFeature.RawTarget;
@@ -144,15 +144,18 @@ namespace DotNetCoreOpen.PrerenderMiddleware
             if (Regex.IsMatch(relativeUrl, DefaultIgnoredExtensions, RegexOptions.IgnorePatternWhitespace))
                 return false;
 
-            if (!string.IsNullOrEmpty(Configuration.WhiteListPattern)
-              && Regex.IsMatch(rawUrl, Configuration.WhiteListPattern, RegexOptions.IgnorePatternWhitespace))
-                return true;
+            if (!string.IsNullOrEmpty(Configuration.AdditionalExtensionPattern) && Regex.IsMatch(relativeUrl, Configuration.AdditionalExtensionPattern, RegexOptions.IgnorePatternWhitespace))
+                return false;
 
             if (!string.IsNullOrEmpty(Configuration.BlackListPattern)
               && Regex.IsMatch(rawUrl, Configuration.BlackListPattern, RegexOptions.IgnorePatternWhitespace))
                 return false;
 
-            return true;
+            if (!string.IsNullOrEmpty(Configuration.WhiteListPattern)
+              && Regex.IsMatch(rawUrl, Configuration.WhiteListPattern, RegexOptions.IgnorePatternWhitespace))
+                return true;
+
+            return false;
 
         }
         #endregion

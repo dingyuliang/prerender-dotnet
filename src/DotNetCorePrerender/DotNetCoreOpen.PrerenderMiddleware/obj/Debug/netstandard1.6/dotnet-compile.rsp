@@ -9,11 +9,11 @@
 --optimize:False
 --output-name:DotNetCoreOpen.PrerenderMiddleware
 --title:DotNetCoreOpen.PrerenderMiddleware
---description:ASP.NET Core Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet.
+--description:ASP.NET MVC and WebForm Middleware for Prerender.io (.NET Framework 4.0+).  github:https: //github.com/dingyuliang/prerender-dotnet. related blogs: http: //netopensource.com/tag/prerender/ 
 --copyright:Copyright 2017
---file-version:1.0.1.0
---version:1.0.1.0
---informational-version:1.0.1
+--file-version:1.0.2.0
+--version:1.0.2.0
+--informational-version:1.0.2
 --neutral-language:.NET Core
 --target-framework:.NETStandard,Version=v1.6
 --reference:C:\Users\yuliang\.nuget\packages\Microsoft.AspNetCore.Http.Abstractions\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Http.Abstractions.dll

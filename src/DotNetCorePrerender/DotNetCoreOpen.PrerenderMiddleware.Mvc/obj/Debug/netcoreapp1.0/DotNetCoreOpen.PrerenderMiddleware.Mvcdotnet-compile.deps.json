@@ -29,7 +29,7 @@
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
-          "DotNetCoreOpen.PrerenderMiddleware": "1.0.1"
+          "DotNetCoreOpen.PrerenderMiddleware": "1.0.2"
         },
         "compile": {
           "DotNetCoreOpen.PrerenderMiddleware.Mvc.dll": {}
@@ -2564,7 +2564,7 @@
           "System.Xml.XPath": "4.0.1"
         }
       },
-      "DotNetCoreOpen.PrerenderMiddleware/1.0.1": {
+      "DotNetCoreOpen.PrerenderMiddleware/1.0.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "1.0.0",
           "Microsoft.AspNetCore.Http.Extensions": "1.0.0",
@@ -2596,7 +2596,7 @@
           "Microsoft.Extensions.Logging.Debug": "1.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
-          "DotNetCoreOpen.PrerenderMiddleware": "1.0.1"
+          "DotNetCoreOpen.PrerenderMiddleware": "1.0.2"
         },
         "runtime": {
           "DotNetCoreOpen.PrerenderMiddleware.Mvc.dll": {}
@@ -5041,7 +5041,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
-      "DotNetCoreOpen.PrerenderMiddleware/1.0.1": {
+      "DotNetCoreOpen.PrerenderMiddleware/1.0.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "1.0.0",
           "Microsoft.AspNetCore.Http.Extensions": "1.0.0",
@@ -6009,7 +6009,7 @@
       "serviceable": true,
       "sha512": "sha512-FLhdYJx4331oGovQypQ8JIw2kEmNzCsjVOVYY/16kZTUoquZG85oVn7yUhBE2OZt1yGPSXAL0HTEfzjlbNpM7Q=="
     },
-    "DotNetCoreOpen.PrerenderMiddleware/1.0.1": {
+    "DotNetCoreOpen.PrerenderMiddleware/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
