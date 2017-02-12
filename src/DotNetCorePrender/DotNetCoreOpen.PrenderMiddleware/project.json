@@ -36,7 +36,7 @@
     "iconUrl": "https://www.nuget.org/favicon.ico",
     "requireLicenseAcceptance": true,
     "owners": [ "dingyuliang" ],
-    "tags": [ "Prerender", "Prerender.io", "ASP.NET Core Middleware", "ASP.NET", "Core" ],
+    "tags": [ "Prerender", "Prerender.io", "ASP.NET Core Middleware", "ASP.NET Core", "DotNetCore" ],
     "releaseNotes": "First release of ASP.NET Core Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet.",
     "summary": "ASP.NET Core Middleware for Prerender.io, github: https://github.com/dingyuliang/prerender-dotnet."
   }
