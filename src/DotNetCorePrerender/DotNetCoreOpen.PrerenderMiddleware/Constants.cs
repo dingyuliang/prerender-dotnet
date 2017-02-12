@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace DotNetCoreOpen.PrerenderMiddleware
+{
+    public static class Constants
+    {
+        #region Const
+        public const string PrerenderIOServiceUrl = "http://service.prerender.io/";
+        public const int DefaultPort = 80;
+        public const string CrawlerUserAgentPattern = "(baiduspider)|(facebookexternalhit)|(twitterbot)|(rogerbot)|(linkedinbot)|(embedly)|(quora link preview)|(showyoubot)|(outbrain)|(pinterest)|(google\\.com)|(slackbot)|(vkShare)|(W3C_Validator)|(redditbot)|(Applebot)|(WhatsApp)|(flipboard)|(tumblr)|(bitlybot)|(SkypeUriPreview)|(nuzzel)|(Discordbot)|(Google Page Speed)|(x\\-bufferbot)";
+
+        public const string EscapedFragment = "_escaped_fragment_";
+        public const string HttpProtocol = "http://";
+        public const string HttpsProtocol = "https://";
+        public const string HttpHeader_XForwardedProto = "X-Forwarded-Proto";
+        public const string HttpHeader_XPrerenderToken = "X-Prerender-Token";
+        public const string HttpHeader_UserAgent = "User-Agent";
+        public const string HttpHeader_ContentType = "Content-Type"; 
+        #endregion
+    }
+}
