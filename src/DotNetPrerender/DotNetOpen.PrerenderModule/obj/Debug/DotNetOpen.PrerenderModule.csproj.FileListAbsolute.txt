@@ -1,8 +1,0 @@
-D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\bin\Debug\DotNetOpen.PrerenderModule.dll
-D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\bin\Debug\DotNetOpen.PrerenderModule.pdb
-D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\bin\Debug\Microsoft.Web.Infrastructure.dll
-D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\obj\Debug\DotNetOpen.PrerenderModule.dll
-D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\obj\Debug\DotNetOpen.PrerenderModule.pdb
-D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\bin\Debug\System.Net.Http.dll
-D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\bin\Debug\System.Net.Http.xml
-D:\Project\git.dingyuliang\prerender\src\DotNetPrerender\DotNetOpen.PrerenderModule\obj\Debug\DotNetOpen.PrerenderModule.csprojResolveAssemblyReference.cache
