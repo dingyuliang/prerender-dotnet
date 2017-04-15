@@ -2,15 +2,15 @@
 This project is to provide the prerender.io middlewares for ASP.NET MVC, ASP.NET Core, IIS. 
 
 There are several blog posts which explain why we need to use prerender to improve JavaScript SEO and how to implement it on different levels.
-* [Use Prerender to improve AngularJS SEO](http://netopensource.com/use-prerender-improve-angularjs-seo/)
+* [Use Prerender to improve AngularJS SEO](http://dingyuliang.me/use-prerender-improve-angularjs-seo/)
 
   * Application Level (i.e.  ASP.NET MVC middleware for prerender.io and ASP.NET Core middleware for prerender.io)
   * Server Container Level (i.e. IIS configuration guide for prerender.io)
   * Network Level
   
-* [Setup Prerender Service for JavaScript SEO](http://netopensource.com/setup-prerender-service-javascript-seo/)
+* [Setup Prerender Service for JavaScript SEO](http://dingyuliang.me/setup-prerender-service-javascript-seo/)
 
-* [Prerender Implementation Best Practice](http://netopensource.com/prerender-implementation-best-practice/)
+* [Prerender Implementation Best Practice](http://dingyuliang.me/prerender-implementation-best-practice/)
 
 ## src/DotNetPrerender is the ASP.NET MVC middleware for prerender.io
 
