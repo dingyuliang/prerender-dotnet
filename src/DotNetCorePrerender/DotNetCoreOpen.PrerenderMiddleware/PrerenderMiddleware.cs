@@ -21,7 +21,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
     public class PrerenderMiddleware
     {
         #region Static ReadOnly        
-        const string DefaultIgnoredExtensions = "\\.vxml|js|css|less|png|jpg|jpeg|gif|pdf|doc|txt|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent";
+        const string DefaultIgnoredExtensions = "\\.(vxml|js|css|less|png|jpg|jpeg|gif|pdf|doc|txt|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent)";
         static readonly Encoding DefaultEncoding = Encoding.UTF8;
         #endregion
 
@@ -64,7 +64,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
                 // generate URL
                 var requestUrl = request.GetDisplayUrl();
                 // if traffic is forwarded from https://, we convert http:// to https://.
-                if (string.Equals(request.Headers[Constants.HttpHeader_XForwardedProto], Constants.HttpsProtocol, StringComparison.OrdinalIgnoreCase)
+                if (string.Equals(request.Headers[Constants.HttpHeader_XForwardedProto], Constants.Https, StringComparison.OrdinalIgnoreCase)
                  && requestUrl.StartsWith(Constants.HttpProtocol, StringComparison.OrdinalIgnoreCase))
                 {
                     requestUrl = Constants.HttpsProtocol + requestUrl.Substring(Constants.HttpProtocol.Length);
@@ -134,9 +134,9 @@ namespace DotNetCoreOpen.PrerenderMiddleware
                 return false;
 
             // check if it's crawler user agent.
-            var crawlerUserAgentPattern = Configuration.CrawlerUserAgentPattern ?? Constants.CrawlerUserAgentPattern;
+            var crawlerUserAgentPattern = string.IsNullOrEmpty(Configuration.CrawlerUserAgentPattern) ? Constants.CrawlerUserAgentPattern : Configuration.CrawlerUserAgentPattern;
             if (string.IsNullOrEmpty(crawlerUserAgentPattern)
-             || !Regex.IsMatch(userAgent, crawlerUserAgentPattern, RegexOptions.IgnorePatternWhitespace))
+             || !Regex.IsMatch(userAgent, crawlerUserAgentPattern, RegexOptions.IgnorePatternWhitespace | RegexOptions.IgnoreCase))
                 return false;
 
             // check if the extenion matchs default extension
