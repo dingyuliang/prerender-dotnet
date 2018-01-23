@@ -151,10 +151,10 @@ namespace DotNetCoreOpen.PrerenderMiddleware
                 return false;
 
             if (!string.IsNullOrEmpty(Configuration.WhiteListPattern)
-              && Regex.IsMatch(rawUrl, Configuration.WhiteListPattern, RegexOptions.IgnorePatternWhitespace))
-                return true;
+              && !Regex.IsMatch(rawUrl, Configuration.WhiteListPattern, RegexOptions.IgnorePatternWhitespace))
+                return false;
 
-            return false;
+            return true;
 
         }
         #endregion
