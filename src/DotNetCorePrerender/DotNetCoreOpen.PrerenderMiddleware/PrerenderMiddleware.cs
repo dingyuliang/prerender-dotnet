@@ -20,8 +20,8 @@ namespace DotNetCoreOpen.PrerenderMiddleware
     /// </summary>
     public class PrerenderMiddleware
     {
-        #region Static ReadOnly        
-        const string DefaultIgnoredExtensions = "\\.(vxml|js|css|less|png|jpg|jpeg|gif|pdf|doc|txt|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent)";
+        #region Static ReadOnly
+        const string DefaultIgnoredExtensions = "\\.(vxml|js|css|less|png|jpg|jpeg|gif|pdf|doc|txt|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent)$";
         static readonly Encoding DefaultEncoding = Encoding.UTF8;
         #endregion
 
@@ -151,10 +151,10 @@ namespace DotNetCoreOpen.PrerenderMiddleware
                 return false;
 
             if (!string.IsNullOrEmpty(Configuration.WhiteListPattern)
-              && Regex.IsMatch(rawUrl, Configuration.WhiteListPattern, RegexOptions.IgnorePatternWhitespace))
-                return true;
+              && !Regex.IsMatch(rawUrl, Configuration.WhiteListPattern, RegexOptions.IgnorePatternWhitespace))
+                return false;
 
-            return false;
+            return true;
 
         }
         #endregion
