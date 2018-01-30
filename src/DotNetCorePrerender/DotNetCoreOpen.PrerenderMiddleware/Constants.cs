@@ -15,6 +15,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
         public const string EscapedFragment = "_escaped_fragment_";
         public const string HttpProtocol = "http://";
         public const string HttpsProtocol = "https://";
+        public const string Https = "https";
         public const string HttpHeader_XForwardedProto = "X-Forwarded-Proto";
         public const string HttpHeader_XPrerenderToken = "X-Prerender-Token";
         public const string HttpHeader_UserAgent = "User-Agent";
