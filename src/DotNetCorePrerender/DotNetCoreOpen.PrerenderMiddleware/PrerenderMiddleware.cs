@@ -21,7 +21,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
     public class PrerenderMiddleware
     {
         #region Static ReadOnly
-        const string DefaultIgnoredExtensions = "\\.(vxml|js|css|less|png|jpg|jpeg|gif|pdf|doc|txt|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent|ico|json)$";
+        const string DefaultIgnoredExtensions = "\\.(vxml|js|css|less|png|jpg|jpeg|gif|pdf|doc|txt|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent|ico|json|map)$";
         static readonly Encoding DefaultEncoding = Encoding.UTF8;
         #endregion
 
