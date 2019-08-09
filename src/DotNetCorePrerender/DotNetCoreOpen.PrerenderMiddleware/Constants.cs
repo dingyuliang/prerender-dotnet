@@ -10,7 +10,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
         #region Const
         public const string PrerenderIOServiceUrl = "http://service.prerender.io/";
         public const int DefaultPort = 80;
-        public const string CrawlerUserAgentPattern = "(google)|(bing)|(Slurp)|(DuckDuckBot)|(YandexBot)|(baiduspider)|(Sogou)|(Exabot)|(ia_archiver)|(facebot)|(facebook)|(twitterbot)|(rogerbot)|(linkedinbot)|(embedly)|(quora)|(pinterest)|(slackbot)|(redditbot)|(Applebot)|(WhatsApp)|(flipboard)|(tumblr)|(bitlybot)|(Discordbot)";
+        public const string CrawlerUserAgentPattern = "(bingbot)|(googlebot)|(google)|(bing)|(Slurp)|(DuckDuckBot)|(YandexBot)|(baiduspider)|(Sogou)|(Exabot)|(ia_archiver)|(facebot)|(facebook)|(twitterbot)|(rogerbot)|(linkedinbot)|(embedly)|(quora)|(pinterest)|(slackbot)|(redditbot)|(Applebot)|(WhatsApp)|(flipboard)|(tumblr)|(bitlybot)|(Discordbot)";
 
         public const string EscapedFragment = "_escaped_fragment_";
         public const string HttpProtocol = "http://";
