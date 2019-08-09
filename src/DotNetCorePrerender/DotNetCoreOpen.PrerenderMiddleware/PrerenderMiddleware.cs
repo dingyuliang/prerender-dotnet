@@ -72,7 +72,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
                 var prerenderUrl = $"{Configuration.ServiceUrl.Trim('/')}/{requestUrl}";
 
                 // use HttpClient instead of HttpWebRequest, as HttpClient has AllowAutoRedirect option.
-                var httpClientHandler = new HttpClientHandler() { AllowAutoRedirect = true };
+                var httpClientHandler = new HttpClientHandler() { AllowAutoRedirect = false };
                 // Proxy Information
                 if (!string.IsNullOrEmpty(Configuration.ProxyUrl) && Configuration.ProxyPort > 0)
                     httpClientHandler.Proxy = new WebProxy(Configuration.ProxyUrl, Configuration.ProxyPort);
@@ -101,7 +101,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
                             using (var stream = await webMessage.Content.ReadAsStreamAsync())
                             using (var reader = new StreamReader(stream))
                             {
-                                webMessage.EnsureSuccessStatusCode();
+                                ValidateResponseStatusCode(webMessage);
                                 text = reader.ReadToEnd();
                             }
                         }
@@ -118,7 +118,16 @@ namespace DotNetCoreOpen.PrerenderMiddleware
                 await _next.Invoke(httpContext);
             }
         }
-        
+
+        private static void ValidateResponseStatusCode(HttpResponseMessage webMessage)
+        {
+            if (webMessage.StatusCode == HttpStatusCode.Moved || webMessage.StatusCode == HttpStatusCode.MovedPermanently || webMessage.StatusCode == HttpStatusCode.NotFound)
+            {
+                return;
+            }
+            webMessage.EnsureSuccessStatusCode();
+        }
+
         private bool IsValidForPrerenderPage(HttpRequest request, IHttpRequestFeature requestFeature)
         {
             var userAgent = request.Headers[Constants.HttpHeader_UserAgent];
