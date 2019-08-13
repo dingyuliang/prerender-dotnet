@@ -21,7 +21,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
     public class PrerenderMiddleware
     {
         #region Static ReadOnly
-        const string DefaultIgnoredExtensions = "\\.(vxml|js|css|less|png|jpg|jpeg|gif|pdf|doc|txt|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent|ico|json|map)$";
+        const string DefaultIgnoredExtensions = "\\.(ai|avi|css|dat|dmg|doc|doc|exe|flv|gif|ico|iso|jpeg|jpg|js|json|less|m4a|m4v|map|mov|mp3|mp4|mpeg|mpg|pdf|png|ppt|psd|rar|svg|swf|tif|torrent|txt|vxml|wav|wmv|xls|zip)$";
         static readonly Encoding DefaultEncoding = Encoding.UTF8;
         #endregion
 
@@ -133,7 +133,14 @@ namespace DotNetCoreOpen.PrerenderMiddleware
             var userAgent = request.Headers[Constants.HttpHeader_UserAgent];
             var rawUrl = requestFeature.RawTarget;
             var relativeUrl = request.Path.ToString();
-            
+            var isFromPrerender = request.Headers["X-Prerender"] == "1";
+
+            // check if the request is coming from prerender.io
+            if (isFromPrerender)
+            {
+                return false;
+            }            
+
             // check if follows google search engine suggestion
             if (request.Query.Keys.Any(a => a.Equals(Constants.EscapedFragment, StringComparison.OrdinalIgnoreCase)))
                 return true;
