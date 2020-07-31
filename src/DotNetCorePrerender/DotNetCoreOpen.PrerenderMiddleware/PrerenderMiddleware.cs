@@ -21,7 +21,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
     public class PrerenderMiddleware
     {
         #region Static ReadOnly
-        const string DefaultIgnoredExtensions = "\\.(vxml|js|css|less|png|jpg|jpeg|gif|pdf|doc|txt|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent)$";
+        const string DefaultIgnoredExtensions = "\\.(ai|avi|css|dat|dmg|doc|doc|exe|flv|gif|ico|iso|jpeg|jpg|js|json|less|m4a|m4v|map|mov|mp3|mp4|mpeg|mpg|pdf|png|ppt|psd|rar|svg|swf|tif|torrent|txt|vxml|wav|wmv|xls|zip)$";
         static readonly Encoding DefaultEncoding = Encoding.UTF8;
         #endregion
 
@@ -72,7 +72,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
                 var prerenderUrl = $"{Configuration.ServiceUrl.Trim('/')}/{requestUrl}";
 
                 // use HttpClient instead of HttpWebRequest, as HttpClient has AllowAutoRedirect option.
-                var httpClientHandler = new HttpClientHandler() { AllowAutoRedirect = true };
+                var httpClientHandler = new HttpClientHandler() { AllowAutoRedirect = false };
                 // Proxy Information
                 if (!string.IsNullOrEmpty(Configuration.ProxyUrl) && Configuration.ProxyPort > 0)
                     httpClientHandler.Proxy = new WebProxy(Configuration.ProxyUrl, Configuration.ProxyPort);
@@ -101,7 +101,7 @@ namespace DotNetCoreOpen.PrerenderMiddleware
                             using (var stream = await webMessage.Content.ReadAsStreamAsync())
                             using (var reader = new StreamReader(stream))
                             {
-                                webMessage.EnsureSuccessStatusCode();
+                                ValidateResponseStatusCode(webMessage);
                                 text = reader.ReadToEnd();
                             }
                         }
@@ -118,13 +118,29 @@ namespace DotNetCoreOpen.PrerenderMiddleware
                 await _next.Invoke(httpContext);
             }
         }
-        
+
+        private static void ValidateResponseStatusCode(HttpResponseMessage webMessage)
+        {
+            if (webMessage.StatusCode == HttpStatusCode.Moved || webMessage.StatusCode == HttpStatusCode.MovedPermanently || webMessage.StatusCode == HttpStatusCode.NotFound)
+            {
+                return;
+            }
+            webMessage.EnsureSuccessStatusCode();
+        }
+
         private bool IsValidForPrerenderPage(HttpRequest request, IHttpRequestFeature requestFeature)
         {
             var userAgent = request.Headers[Constants.HttpHeader_UserAgent];
             var rawUrl = requestFeature.RawTarget;
             var relativeUrl = request.Path.ToString();
-            
+            var isFromPrerender = request.Headers["X-Prerender"] == "1";
+
+            // check if the request is coming from prerender.io
+            if (isFromPrerender)
+            {
+                return false;
+            }            
+
             // check if follows google search engine suggestion
             if (request.Query.Keys.Any(a => a.Equals(Constants.EscapedFragment, StringComparison.OrdinalIgnoreCase)))
                 return true;
